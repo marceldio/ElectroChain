@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "946e2455-97bf-4805-a70b-9db189c9dd46",
+		"name": "ElectroChain API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36346429"
+	},
+	"item": [
+		{
+			"name": "get_api_network",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
