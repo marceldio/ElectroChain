@@ -35,6 +35,25 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-autocomplete-light"
+version = "3.11.0"
+description = "Fresh autocompletes for Django"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-autocomplete-light-3.11.0.tar.gz", hash = "sha256:212576a17e3308ef7ca77e280b86684167916d2091d4b73640f38845d9516328"},
+]
+
+[package.dependencies]
+django = ">=3.2"
+
+[package.extras]
+genericm2m = ["django-generic-m2m"]
+gfk = ["django-querysetsequence (>=0.11)"]
+nested = ["django-nested-admin (>=3.0.21)"]
+tags = ["django-taggit"]
+
+[[package]]
 name = "djangorestframework"
 version = "3.15.2"
 description = "Web APIs for Django, made easy."
@@ -167,4 +186,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "c77c4a78d803ec2c6e32f3d3d2157e18605dc1c8836afbb29c3fb880deb20769"
+content-hash = "c436309ba0d0a6f4e2cf579596d7418ec3196fc61a3ee4bf4f8159dc8e5c89e7"
