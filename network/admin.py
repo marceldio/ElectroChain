@@ -21,8 +21,10 @@ class ProductAdmin(admin.ModelAdmin):
 class NetworkNodeAdmin(admin.ModelAdmin):
     form = NetworkNodeAdminForm
     list_display = ['name', 'supplier', 'contact', 'debt', 'created_at']
+    list_display_links = ['supplier']
     search_fields = ['name', 'supplier__name', 'contact__email']
     ordering = ['created_at']
+    list_filter = ('contact__country', 'contact__city',)
 
     def formfield_for_manytomany(self, db_field, request, **kwargs):
         if db_field.name == "products":
