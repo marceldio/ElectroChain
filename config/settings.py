@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "network",
     "rest_framework.authtoken",
+    "dal",
+    "dal_select2",
 ]
 
 MIDDLEWARE = [
