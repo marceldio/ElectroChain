@@ -7,6 +7,7 @@ class NetworkNodeAdminForm(forms.ModelForm):
         model = NetworkNode
         fields = ['supplier', 'products', 'contact', 'debt', 'name']
         field_order = ['supplier', 'products', 'contact', 'debt', 'name']
+        list_filter = ('supplier', 'contact',)
 
     products = forms.ModelMultipleChoiceField(
         queryset=Product.objects.none(),
