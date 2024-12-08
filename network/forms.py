@@ -24,3 +24,6 @@ class NetworkNodeAdminForm(forms.ModelForm):
             self.fields['products'].queryset = Product.objects.filter(network_nodes=self.instance.supplier)
         else:
             self.fields['products'].queryset = Product.objects.all()
+
+        # Фильтры для country и city
+        self.fields['contact'].queryset = self.fields['contact'].queryset.order_by('country', 'city')
