@@ -16,7 +16,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class NetworkNodeSerializer(serializers.ModelSerializer):
     contact = ContactSerializer()
-    products = ProductSerializer()
+    products = ProductSerializer(many=True, read_only=True)  # Вложенный сериализатор
 
     class Meta:
         model = NetworkNode

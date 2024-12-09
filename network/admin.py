@@ -29,7 +29,7 @@ class NetworkNodeAdmin(admin.ModelAdmin):
     ordering = ['created_at']
     list_filter = ('contact__country', 'contact__city',)  # Фильтр по стране, городу
     readonly_fields = ['supplier_link', 'clear_debt_button']  # Поля для ссылки на поставщика и действия
-    actions = ['clear_debt']  # Вернем действие на страницу списка
+    actions = ['clear_debt']
 
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
@@ -86,5 +86,5 @@ class NetworkNodeAdmin(admin.ModelAdmin):
         self.message_user(request, "Задолженность успешно очищена для выбранных объектов.")
 
     class Media:
-        """Подключение пользовательских скриптов, если необходимо."""
+        """Подключение пользовательских скриптов."""
         js = ('admin/js/clear_debt.js',)

@@ -2,10 +2,7 @@ from rest_framework import viewsets
 from .models import NetworkNode
 from .serializers import NetworkNodeSerializer
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.exceptions import AuthenticationFailed
 from dal import autocomplete
 from .models import Product
 
